@@ -8,20 +8,25 @@
 
 
 function parolCheck(str){
-    if(str.length> 8){
-        let harf =str.toLowerCase()
-        let Harf = str.toUpperCase()
+    if(str.length< 8){
+        console.log(`Kuchsiz parol: 8 ta belgidan kam`);
         
-        console.log(Harf);
-        console.log(harf);
+    }else if(!/[A-Z]/.test(str)){
+        console.log(`Kuchsiz parol. katta harf yuq.`);
+
+    }else if(!/[a-z]/.test(str)){
+        console.log(`kuchsiz parol. kichik harf yuq.`);
         
-        console.log("Kuchli parol");
+    }else if(!/[0-9]/.test(str)){
+        console.log(`kuchsiz parol. raqam yuq`);
         
     }else{
-        console.log("Kuchsiz parol");
+        console.log(`kuchli parol`);
         
     }
-}
 
-let str ="SAlomertui"
+        
+    }
+
+let str ="Salomlashish12"
 parolCheck(str)
